@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import { Image, View, Text, Pressable, StyleSheet } from 'react-native';
-import { TextInput } from "@react-native-material/core";
+import { TextInput } from 'react-native-paper';
 
 // let system = new System();
 
@@ -23,27 +23,25 @@ function Signup({ navigation }) {
                 <Text>Find your voice</Text>
                 <Text>Signup with your email</Text>
                 <View>
-                    <TextInput variant="outlined" style={styles.input} type="text"
-                        id='name' placeholder='Full Name'
-                        placeholderTextColor={'#000000'}
+                    <TextInput mode="outlined" style={styles.input} type="text"
+                        id='name' label='Full Name'
                         onChangeText={newText => setName(newText)}
                         defaultValue={name}>
                     </TextInput>
-                    <TextInput variant="outlined" style={styles.input} type="text"
-                        id='email' placeholder='Email'
-                        placeholderTextColor={'#000000'}
+                    <TextInput mode="outlined" style={styles.input} type="text"
+                        id='email' label='Email'
                         onChangeText={newText => setEmail(newText)}
                         defaultValue={email}>
                     </TextInput>
-                    <TextInput variant="outlined" style={styles.input} type="text"
-                        id='username' placeholder='Username'
-                        placeholderTextColor={'#000000'}
+                    <TextInput mode="outlined" style={styles.input} type="text"
+                        id='username' label='Username'
                         onChangeText={newText => setUsername(newText)}
                         defaultValue={username}>
                     </TextInput>
-                    <TextInput variant="outlined" style={styles.input} type="password"
-                        id='password' placeholder='Password'
-                        placeholderTextColor={'#696969'}
+                    <TextInput mode="outlined" style={styles.input} type="password"
+                        id='password' label='Password'
+                        right={<TextInput.Icon icon="eye" />}
+                        secureTextEntry
                         onChangeText={newText => setPassword(newText)}
                         defaultValue={password}>
                     </TextInput>
