@@ -5,7 +5,7 @@ import { TextInput } from "@react-native-material/core";
 
 // let system = new System();
 
-function Login({ navigation }) {
+function Signup({ navigation }) {
 
     const [name, setName] = useState('');
 
@@ -94,4 +94,4 @@ const styles = StyleSheet.create(
     }
 )
 
-export default Login;
+export default Signup;
